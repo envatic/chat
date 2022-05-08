@@ -46,10 +46,10 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"envatic\\Chat\\ChatServiceProvider"
+				"Envatic\\Chat\\ChatServiceProvider"
 			],
 			"aliases": {
-				"Chat": "envatic\\Chat\\Facades\\ChatFacade"
+				"Chat": "Envatic\\Chat\\Facades\\ChatFacade"
 			}
 		}
 	}
