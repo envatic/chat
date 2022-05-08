@@ -29,12 +29,12 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"envatic\\Chat\\": "src/"
+			"Envatic\\Chat\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"envatic\\Chat\\Tests\\": "tests"
+			"Envatic\\Chat\\Tests\\": "tests"
 		},
 		"files": [
 			"tests/Helpers/Models.php"
