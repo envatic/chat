@@ -2,8 +2,8 @@
 
 namespace Envatic\Chat\Facades;
 
-use Illuminate\Support\Facades\Facade;
 use Envatic\Chat\Chat;
+use Illuminate\Support\Facades\Facade;
 
 class ChatFacade extends Facade
 {

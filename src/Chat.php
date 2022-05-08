@@ -50,8 +50,8 @@ class Chat
     public function createConversation(array $participants, array $data = [])
     {
         $payload = [
-            'participants'   => $participants,
-            'data'           => $data,
+            'participants' => $participants,
+            'data' => $data,
             'direct_message' => $this->conversationService->directMessage,
         ];
 
@@ -138,6 +138,6 @@ class Chat
     {
         $fields = config('envatic_chat.sender_fields_whitelist', []);
 
-        return (is_array($fields) && !empty($fields)) ? $fields : null;
+        return (is_array($fields) && ! empty($fields)) ? $fields : null;
     }
 }

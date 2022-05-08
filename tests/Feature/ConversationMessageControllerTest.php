@@ -20,9 +20,9 @@ class ConversationMessageControllerTest extends TestCase
         Chat::conversation($conversation)->addParticipants([$userModel, $clientModel]);
 
         $payload = [
-            'participant_id'   => $userModel->getKey(),
+            'participant_id' => $userModel->getKey(),
             'participant_type' => $userModel->getMorphClass(),
-            'message'          => [
+            'message' => [
                 'body' => 'Hello',
             ],
         ];
@@ -49,12 +49,12 @@ class ConversationMessageControllerTest extends TestCase
 
         $parameters = [
             $conversation->getKey(),
-            'participant_id'   => $userModel->getKey(),
+            'participant_id' => $userModel->getKey(),
             'participant_type' => $userModel->getMorphClass(),
-            'page'             => 1,
-            'perPage'          => 2,
-            'sorting'          => 'desc',
-            'columns'          => [
+            'page' => 1,
+            'perPage' => 2,
+            'sorting' => 'desc',
+            'columns' => [
                 '*',
             ],
         ];
@@ -84,7 +84,7 @@ class ConversationMessageControllerTest extends TestCase
 
         $parameters = [
             $conversation->getKey(),
-            'participant_id'   => $userModel->getKey(),
+            'participant_id' => $userModel->getKey(),
             'participant_type' => $userModel->getMorphClass(),
         ];
 
@@ -112,7 +112,7 @@ class ConversationMessageControllerTest extends TestCase
         $parameters = [
             $conversation->getKey(),
             $message->getKey(),
-            'participant_id'   => $userModel->getKey(),
+            'participant_id' => $userModel->getKey(),
             'participant_type' => $userModel->getMorphClass(),
         ];
 

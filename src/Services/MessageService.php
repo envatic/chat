@@ -2,11 +2,11 @@
 
 namespace Envatic\Chat\Services;
 
-use Exception;
 use Envatic\Chat\Commanding\CommandBus;
 use Envatic\Chat\Messages\SendMessageCommand;
 use Envatic\Chat\Models\Message;
 use Envatic\Chat\Traits\SetsParticipants;
+use Exception;
 
 class MessageService
 {
@@ -116,7 +116,7 @@ class MessageService
      */
     public function send()
     {
-        if (!$this->sender) {
+        if (! $this->sender) {
             throw new Exception('Message sender has not been set');
         }
 
@@ -124,7 +124,7 @@ class MessageService
             throw new Exception('Message body has not been set');
         }
 
-        if (!$this->recipient) {
+        if (! $this->recipient) {
             throw new Exception('Message receiver has not been set');
         }
 

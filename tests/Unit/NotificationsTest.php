@@ -3,8 +3,8 @@
 namespace Envatic\Chat\Tests;
 
 use Chat;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Envatic\Chat\Models\Conversation;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class NotificationsTest extends TestCase
 {

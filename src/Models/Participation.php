@@ -2,10 +2,10 @@
 
 namespace Envatic\Chat\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-//use Illuminate\Database\Eloquent\SoftDeletes;
 use Envatic\Chat\BaseModel;
+//use Illuminate\Database\Eloquent\SoftDeletes;
 use Envatic\Chat\ConfigurationManager;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Participation extends BaseModel
 {

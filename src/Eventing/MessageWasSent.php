@@ -2,13 +2,13 @@
 
 namespace Envatic\Chat\Eventing;
 
+use Envatic\Chat\Models\Message;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Envatic\Chat\Models\Message;
 
 class MessageWasSent extends Event implements ShouldBroadcast
 {
@@ -36,13 +36,13 @@ class MessageWasSent extends Event implements ShouldBroadcast
     {
         return [
             'message' => [
-                'id'              => $this->message->getKey(),
-                'body'            => $this->message->body,
+                'id' => $this->message->getKey(),
+                'body' => $this->message->body,
                 'conversation_id' => $this->message->conversation_id,
-                'type'            => $this->message->type,
-                'data'            => $this->message->data,
-                'created_at'      => $this->message->created_at,
-                'sender'          => $this->message->sender,
+                'type' => $this->message->type,
+                'data' => $this->message->data,
+                'created_at' => $this->message->created_at,
+                'sender' => $this->message->sender,
             ],
         ];
     }

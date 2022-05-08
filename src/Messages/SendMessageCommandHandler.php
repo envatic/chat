@@ -2,9 +2,9 @@
 
 namespace Envatic\Chat\Messages;
 
-use Illuminate\Database\Eloquent\Model;
 use Envatic\Chat\Eventing\EventDispatcher;
 use Envatic\Chat\Models\Message;
+use Illuminate\Database\Eloquent\Model;
 
 class SendMessageCommandHandler
 {

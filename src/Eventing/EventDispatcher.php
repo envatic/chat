@@ -2,8 +2,8 @@
 
 namespace Envatic\Chat\Eventing;
 
-use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Envatic\Chat\Chat;
+use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 
 class EventDispatcher
 {

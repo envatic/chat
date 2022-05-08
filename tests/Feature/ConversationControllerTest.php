@@ -30,7 +30,7 @@ class ConversationControllerTest extends TestCase
 
         $payload = [
             'participants' => $participants,
-            'data'         => ['title' => 'PHP Channel', 'description' => 'This is our test channel'],
+            'data' => ['title' => 'PHP Channel', 'description' => 'This is our test channel'],
         ];
 
         $this->postJson(route('conversations.store'), $payload)
@@ -40,12 +40,12 @@ class ConversationControllerTest extends TestCase
             ]);
 
         $this->assertDatabaseHas(ConfigurationManager::PARTICIPATION_TABLE, [
-            'messageable_id'   => $userModel->getKey(),
+            'messageable_id' => $userModel->getKey(),
             'messageable_type' => $userModel->getMorphClass(),
         ]);
 
         $this->assertDatabaseHas(ConfigurationManager::PARTICIPATION_TABLE, [
-            'messageable_id'   => $botModel->getKey(),
+            'messageable_id' => $botModel->getKey(),
             'messageable_type' => $botModel->getMorphClass(),
         ]);
     }

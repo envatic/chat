@@ -3,12 +3,12 @@
 namespace Envatic\Chat\Tests;
 
 use Chat;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Envatic\Chat\Models\Conversation;
 use Envatic\Chat\Models\Message;
 use Envatic\Chat\Tests\Helpers\Models\Bot;
 use Envatic\Chat\Tests\Helpers\Models\Client;
 use Envatic\Chat\Tests\Helpers\Models\User;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class MessageTest extends TestCase
 {
@@ -190,10 +190,10 @@ class MessageTest extends TestCase
         $this->assertCount(3, $recent_messages);
 
         $recent_messages = Chat::conversations()->setParticipant($this->alpha)->setPaginationParams([
-            'perPage'  => 1,
-            'page'     => 1,
+            'perPage' => 1,
+            'page' => 1,
             'pageName' => 'test',
-            'sorting'  => 'desc',
+            'sorting' => 'desc',
         ])->get();
 
         $this->assertCount(1, $recent_messages);

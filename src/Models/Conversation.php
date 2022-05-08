@@ -3,12 +3,6 @@
 namespace Envatic\Chat\Models;
 
 use Chat;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Query\Builder;
-use Illuminate\Support\Collection;
 use Envatic\Chat\BaseModel;
 use Envatic\Chat\ConfigurationManager;
 use Envatic\Chat\Eventing\AllParticipantsClearedConversation;
@@ -17,15 +11,21 @@ use Envatic\Chat\Eventing\ParticipantsLeft;
 use Envatic\Chat\Exceptions\DeletingConversationWithParticipantsException;
 use Envatic\Chat\Exceptions\DirectMessagingExistsException;
 use Envatic\Chat\Exceptions\InvalidDirectMessageNumberOfParticipants;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Collection;
 
 class Conversation extends BaseModel
 {
     protected $table = ConfigurationManager::CONVERSATIONS_TABLE;
     protected $fillable = ['data', 'direct_message'];
     protected $casts = [
-        'data'           => 'array',
+        'data' => 'array',
         'direct_message' => 'boolean',
-        'private'        => 'boolean',
+        'private' => 'boolean',
     ];
 
     public function delete()
@@ -96,8 +96,8 @@ class Conversation extends BaseModel
     public function participantFromSender(Model $sender)
     {
         return $this->participants()->where([
-            'conversation_id'  => $this->getKey(),
-            'messageable_id'   => $sender->getKey(),
+            'conversation_id' => $this->getKey(),
+            'messageable_id' => $sender->getKey(),
             'messageable_type' => $sender->getMorphClass(),
         ])->first();
     }
@@ -227,7 +227,7 @@ class Conversation extends BaseModel
         /** @var Conversation $common */
         $common = Chat::conversations()->between($participants[0], $participants[1]);
 
-        if (!is_null($common)) {
+        if (! is_null($common)) {
             throw new DirectMessagingExistsException();
         }
     }

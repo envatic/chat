@@ -7,10 +7,10 @@ require __DIR__.'/Helpers/migrations.php';
 
 use CreateChatTables;
 use CreateTestTables;
-use Illuminate\Foundation\Application;
 use Envatic\Chat\ChatServiceProvider;
 use Envatic\Chat\Facades\ChatFacade;
 use Envatic\Chat\Tests\Helpers\Models\User;
+use Illuminate\Foundation\Application;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -70,9 +70,9 @@ class TestCase extends \Orchestra\Testbench\TestCase
         // Setup default database to use sqlite :memory:
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
-            'driver'   => 'sqlite',
+            'driver' => 'sqlite',
             'database' => ':memory:',
-            'prefix'   => '',
+            'prefix' => '',
         ]);
 
 //         $app['config']->set('database.default', 'testbench');

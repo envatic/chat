@@ -2,8 +2,8 @@
 
 namespace Envatic\Chat\Messages;
 
-use Illuminate\Database\Eloquent\Model;
 use Envatic\Chat\Models\Conversation;
+use Illuminate\Database\Eloquent\Model;
 
 class SendMessageCommand
 {

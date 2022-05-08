@@ -3,14 +3,14 @@
 namespace Envatic\Chat\Http\Controllers;
 
 use Chat;
-use Exception;
-use Illuminate\Contracts\Routing\ResponseFactory;
-use Illuminate\Http\Response;
 use Envatic\Chat\Exceptions\DeletingConversationWithParticipantsException;
 use Envatic\Chat\Http\Requests\DestroyConversation;
 use Envatic\Chat\Http\Requests\StoreConversation;
 use Envatic\Chat\Http\Requests\UpdateConversation;
 use Envatic\Chat\Models\Conversation;
+use Exception;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\Response;
 use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 class ConversationController extends Controller

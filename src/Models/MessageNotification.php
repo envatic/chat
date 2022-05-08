@@ -2,10 +2,10 @@
 
 namespace Envatic\Chat\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Envatic\Chat\BaseModel;
 use Envatic\Chat\ConfigurationManager;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class MessageNotification extends BaseModel
 {
@@ -43,14 +43,14 @@ class MessageNotification extends BaseModel
             $is_sender = ($message->participation_id == $participation->id) ? 1 : 0;
 
             $notification[] = [
-                'messageable_id'   => $participation->messageable_id,
+                'messageable_id' => $participation->messageable_id,
                 'messageable_type' => $participation->messageable_type,
-                'message_id'       => $message->id,
+                'message_id' => $message->id,
                 'participation_id' => $participation->id,
-                'conversation_id'  => $conversation->id,
-                'is_seen'          => $is_sender,
-                'is_sender'        => $is_sender,
-                'created_at'       => $message->created_at,
+                'conversation_id' => $conversation->id,
+                'is_seen' => $is_sender,
+                'is_sender' => $is_sender,
+                'created_at' => $message->created_at,
             ];
             $i++;
             if ($i > 1000) {

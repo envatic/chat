@@ -2,13 +2,13 @@
 
 namespace Envatic\Chat\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Envatic\Chat\BaseModel;
 use Envatic\Chat\Chat;
 use Envatic\Chat\ConfigurationManager;
 use Envatic\Chat\Eventing\AllParticipantsDeletedMessage;
 use Envatic\Chat\Eventing\EventGenerator;
 use Envatic\Chat\Eventing\MessageWasSent;
+use Illuminate\Database\Eloquent\Model;
 
 class Message extends BaseModel
 {
@@ -36,7 +36,7 @@ class Message extends BaseModel
      */
     protected $casts = [
         'flagged' => 'boolean',
-        'data'    => 'array',
+        'data' => 'array',
     ];
 
     protected $appends = ['sender'];
@@ -50,7 +50,7 @@ class Message extends BaseModel
     {
         $participantModel = $this->participation->messageable;
 
-        if (!isset($participantModel)) {
+        if (! isset($participantModel)) {
             return null;
         }
 
@@ -89,10 +89,10 @@ class Message extends BaseModel
     public function send(Conversation $conversation, string $body, Participation $participant, string $type = 'text', array $data = []): Model
     {
         $message = $conversation->messages()->create([
-            'body'             => $body,
+            'body' => $body,
             'participation_id' => $participant->getKey(),
-            'type'             => $type,
-            'data'             => $data,
+            'type' => $type,
+            'data' => $data,
         ]);
 
         if (Chat::broadcasts()) {

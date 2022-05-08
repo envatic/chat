@@ -3,13 +3,13 @@
 namespace Envatic\Chat\Tests;
 
 use Chat;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Support\Collection;
 use Envatic\Chat\Exceptions\DirectMessagingExistsException;
 use Envatic\Chat\Exceptions\InvalidDirectMessageNumberOfParticipants;
 use Envatic\Chat\Models\Conversation;
 use Envatic\Chat\Models\Participation;
 use Envatic\Chat\Tests\Helpers\Models\Client;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Collection;
 
 class ConversationTest extends TestCase
 {

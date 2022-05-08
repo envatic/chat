@@ -2,8 +2,8 @@
 
 namespace Envatic\Chat\Tests\Helpers\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Envatic\Chat\Traits\Messageable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
@@ -21,7 +21,7 @@ class Client extends Model
     {
         return [
             'name' => $this->name,
-            'foo'  => 'bar',
+            'foo' => 'bar',
         ];
     }
 }

@@ -65,10 +65,10 @@ trait Paginates
     public function getPaginationParams()
     {
         return [
-            'page'     => $this->page,
-            'perPage'  => $this->perPage,
-            'sorting'  => $this->sorting,
-            'columns'  => $this->columns,
+            'page' => $this->page,
+            'perPage' => $this->perPage,
+            'sorting' => $this->sorting,
+            'columns' => $this->columns,
             'pageName' => $this->pageName,
         ];
     }

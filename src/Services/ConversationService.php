@@ -2,13 +2,13 @@
 
 namespace Envatic\Chat\Services;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Collection;
 use Envatic\Chat\Eventing\ConversationStarted;
 use Envatic\Chat\Models\Conversation;
 use Envatic\Chat\Traits\Paginates;
 use Envatic\Chat\Traits\SetsParticipants;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Collection;
 
 class ConversationService
 {
@@ -106,10 +106,10 @@ class ConversationService
     public function get()
     {
         return $this->conversation->getParticipantConversations($this->participant, [
-            'perPage'   => $this->perPage,
-            'page'      => $this->page,
-            'pageName'  => 'page',
-            'filters'   => $this->filters,
+            'perPage' => $this->perPage,
+            'page' => $this->page,
+            'pageName' => 'page',
+            'filters' => $this->filters,
         ]);
     }
 

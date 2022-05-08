@@ -1,10 +1,10 @@
 <?php
 
-use Faker\Generator as Faker;
 use Envatic\Chat\Models\Conversation;
 use Envatic\Chat\Tests\Helpers\Models\Bot;
 use Envatic\Chat\Tests\Helpers\Models\Client;
 use Envatic\Chat\Tests\Helpers\Models\User;
+use Faker\Generator as Faker;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,22 +21,22 @@ $factory->define(User::class, function (Faker $faker) {
     static $password;
 
     return [
-        'name'           => $faker->name,
-        'email'          => $faker->unique()->safeEmail,
-        'password'       => $password ?: $password = bcrypt('secret'),
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => 'xahja87ahjahajhajhja',
     ];
 });
 
 $factory->define(Client::class, function (Faker $faker) {
     return [
-        'name'           => $faker->name,
+        'name' => $faker->name,
     ];
 });
 
 $factory->define(Bot::class, function (Faker $faker) {
     return [
-        'name'           => $faker->name,
+        'name' => $faker->name,
     ];
 });
 

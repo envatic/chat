@@ -2,10 +2,10 @@
 
 namespace Envatic\Chat\Traits;
 
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Envatic\Chat\Exceptions\InvalidDirectMessageNumberOfParticipants;
 use Envatic\Chat\Models\Conversation;
 use Envatic\Chat\Models\Participation;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait Messageable
 {
@@ -29,9 +29,9 @@ trait Messageable
         }
 
         $participation = new Participation([
-            'messageable_id'   => $this->getKey(),
+            'messageable_id' => $this->getKey(),
             'messageable_type' => $this->getMorphClass(),
-            'conversation_id'  => $conversation->getKey(),
+            'conversation_id' => $conversation->getKey(),
         ]);
 
         $this->participation()->save($participation);
@@ -40,9 +40,9 @@ trait Messageable
     public function leaveConversation($conversationId)
     {
         $this->participation()->where([
-            'messageable_id'   => $this->getKey(),
+            'messageable_id' => $this->getKey(),
             'messageable_type' => $this->getMorphClass(),
-            'conversation_id'  => $conversationId,
+            'conversation_id' => $conversationId,
         ])->delete();
     }
 }
