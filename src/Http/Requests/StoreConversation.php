@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat\Http\Requests;
+namespace Envatic\Chat\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

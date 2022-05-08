@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat\Http\Controllers;
+namespace Envatic\Chat\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Musonza\Chat\Models;
+namespace Envatic\Chat\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 //use Illuminate\Database\Eloquent\SoftDeletes;
-use Musonza\Chat\BaseModel;
-use Musonza\Chat\ConfigurationManager;
+use Envatic\Chat\BaseModel;
+use Envatic\Chat\ConfigurationManager;
 
 class Participation extends BaseModel
 {

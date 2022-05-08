@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat;
+namespace Envatic\Chat;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +23,7 @@ class ChatServiceProvider extends ServiceProvider
         $this->publishMigrations();
         $this->publishConfig();
 
-        if (config('musonza_chat.should_load_routes')) {
+        if (config('envatic_chat.should_load_routes')) {
             require __DIR__.'/Http/routes.php';
         }
     }
@@ -45,7 +45,7 @@ class ChatServiceProvider extends ServiceProvider
      */
     private function registerChat()
     {
-        $this->app->bind('\Musonza\Chat\Chat', function () {
+        $this->app->bind('\Envatic\Chat\Chat', function () {
             return $this->app->make(Chat::class);
         });
     }

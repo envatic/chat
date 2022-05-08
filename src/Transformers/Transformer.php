@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat\Transformers;
+namespace Envatic\Chat\Transformers;
 
 use League\Fractal;
 use League\Fractal\Manager;

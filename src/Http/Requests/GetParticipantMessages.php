@@ -1,8 +1,8 @@
 <?php
 
-namespace Musonza\Chat\Http\Requests;
+namespace Envatic\Chat\Http\Requests;
 
-use Musonza\Chat\ValueObjects\Pagination;
+use Envatic\Chat\ValueObjects\Pagination;
 
 class GetParticipantMessages extends BaseRequest
 {

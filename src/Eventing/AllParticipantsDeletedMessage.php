@@ -1,8 +1,8 @@
 <?php
 
-namespace Musonza\Chat\Eventing;
+namespace Envatic\Chat\Eventing;
 
-use Musonza\Chat\Models\Message;
+use Envatic\Chat\Models\Message;
 
 class AllParticipantsDeletedMessage extends Event
 {

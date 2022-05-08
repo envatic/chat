@@ -1,8 +1,8 @@
 <?php
 
-namespace Musonza\Chat\ValueObjects;
+namespace Envatic\Chat\ValueObjects;
 
-use Musonza\Chat\ConfigurationManager;
+use Envatic\Chat\ConfigurationManager;
 
 class Pagination
 {

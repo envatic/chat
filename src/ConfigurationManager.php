@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat;
+namespace Envatic\Chat;
 
 class ConfigurationManager
 {
@@ -11,7 +11,7 @@ class ConfigurationManager
 
     public static function paginationDefaultParameters()
     {
-        $pagination = config('musonza_chat.pagination', []);
+        $pagination = config('envatic_chat.pagination', []);
 
         return [
             'page'     => $pagination['page'] ?? 1,

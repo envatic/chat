@@ -1,8 +1,8 @@
 <?php
 
-namespace Musonza\Chat\Tests\Helpers\Transformers;
+namespace Envatic\Chat\Tests\Helpers\Transformers;
 
-use Musonza\Chat\Transformers\Transformer;
+use Envatic\Chat\Transformers\Transformer;
 
 class TestConversationTransformer extends Transformer
 {

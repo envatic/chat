@@ -1,16 +1,16 @@
 <?php
 
-namespace Musonza\Chat\Http\Controllers;
+namespace Envatic\Chat\Http\Controllers;
 
 use Chat;
 use Exception;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Response;
-use Musonza\Chat\Exceptions\DeletingConversationWithParticipantsException;
-use Musonza\Chat\Http\Requests\DestroyConversation;
-use Musonza\Chat\Http\Requests\StoreConversation;
-use Musonza\Chat\Http\Requests\UpdateConversation;
-use Musonza\Chat\Models\Conversation;
+use Envatic\Chat\Exceptions\DeletingConversationWithParticipantsException;
+use Envatic\Chat\Http\Requests\DestroyConversation;
+use Envatic\Chat\Http\Requests\StoreConversation;
+use Envatic\Chat\Http\Requests\UpdateConversation;
+use Envatic\Chat\Models\Conversation;
 use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 class ConversationController extends Controller
@@ -24,7 +24,7 @@ class ConversationController extends Controller
 
     private function setUp()
     {
-        if ($conversationTransformer = config('musonza_chat.transformers.conversation')) {
+        if ($conversationTransformer = config('envatic_chat.transformers.conversation')) {
             $this->conversationTransformer = app($conversationTransformer);
         }
     }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Musonza\Chat\Traits;
+namespace Envatic\Chat\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Musonza\Chat\Exceptions\InvalidDirectMessageNumberOfParticipants;
-use Musonza\Chat\Models\Conversation;
-use Musonza\Chat\Models\Participation;
+use Envatic\Chat\Exceptions\InvalidDirectMessageNumberOfParticipants;
+use Envatic\Chat\Models\Conversation;
+use Envatic\Chat\Models\Participation;
 
 trait Messageable
 {

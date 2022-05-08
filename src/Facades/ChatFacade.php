@@ -1,9 +1,9 @@
 <?php
 
-namespace Musonza\Chat\Facades;
+namespace Envatic\Chat\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Musonza\Chat\Chat;
+use Envatic\Chat\Chat;
 
 class ChatFacade extends Facade
 {

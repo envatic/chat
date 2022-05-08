@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat\Commanding;
+namespace Envatic\Chat\Commanding;
 
 use Exception;
 

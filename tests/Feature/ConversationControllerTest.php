@@ -1,14 +1,14 @@
 <?php
 
-namespace Musonza\Chat\Tests\Feature\Conversation;
+namespace Envatic\Chat\Tests\Feature\Conversation;
 
 use Chat;
-use Musonza\Chat\ConfigurationManager;
-use Musonza\Chat\Models\Conversation;
-use Musonza\Chat\Tests\Helpers\Models\Bot;
-use Musonza\Chat\Tests\Helpers\Models\Client;
-use Musonza\Chat\Tests\Helpers\Models\User;
-use Musonza\Chat\Tests\TestCase;
+use Envatic\Chat\ConfigurationManager;
+use Envatic\Chat\Models\Conversation;
+use Envatic\Chat\Tests\Helpers\Models\Bot;
+use Envatic\Chat\Tests\Helpers\Models\Client;
+use Envatic\Chat\Tests\Helpers\Models\User;
+use Envatic\Chat\Tests\TestCase;
 use Symfony\Component\HttpFoundation\Response;
 
 class ConversationControllerTest extends TestCase

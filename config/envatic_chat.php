@@ -5,7 +5,7 @@ return [
      * This will allow you to broadcast an event when a message is sent
      * Example:
      * Channel: mc-chat-conversation.2,
-     * Event: Musonza\Chat\Eventing\MessageWasSent
+     * Event: Envatic\Chat\Eventing\MessageWasSent
      */
     'broadcasts' => false,
 

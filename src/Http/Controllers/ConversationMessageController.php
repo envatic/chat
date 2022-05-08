@@ -1,12 +1,12 @@
 <?php
 
-namespace Musonza\Chat\Http\Controllers;
+namespace Envatic\Chat\Http\Controllers;
 
 use Chat;
-use Musonza\Chat\Http\Requests\ClearConversation;
-use Musonza\Chat\Http\Requests\DeleteMessage;
-use Musonza\Chat\Http\Requests\GetParticipantMessages;
-use Musonza\Chat\Http\Requests\StoreMessage;
+use Envatic\Chat\Http\Requests\ClearConversation;
+use Envatic\Chat\Http\Requests\DeleteMessage;
+use Envatic\Chat\Http\Requests\GetParticipantMessages;
+use Envatic\Chat\Http\Requests\StoreMessage;
 
 class ConversationMessageController extends Controller
 {
@@ -19,7 +19,7 @@ class ConversationMessageController extends Controller
 
     private function setUp()
     {
-        if ($messageTransformer = config('musonza_chat.transformers.message')) {
+        if ($messageTransformer = config('envatic_chat.transformers.message')) {
             $this->messageTransformer = app($messageTransformer);
         }
     }

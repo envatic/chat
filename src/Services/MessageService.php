@@ -1,12 +1,12 @@
 <?php
 
-namespace Musonza\Chat\Services;
+namespace Envatic\Chat\Services;
 
 use Exception;
-use Musonza\Chat\Commanding\CommandBus;
-use Musonza\Chat\Messages\SendMessageCommand;
-use Musonza\Chat\Models\Message;
-use Musonza\Chat\Traits\SetsParticipants;
+use Envatic\Chat\Commanding\CommandBus;
+use Envatic\Chat\Messages\SendMessageCommand;
+use Envatic\Chat\Models\Message;
+use Envatic\Chat\Traits\SetsParticipants;
 
 class MessageService
 {

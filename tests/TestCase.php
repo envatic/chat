@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat\Tests;
+namespace Envatic\Chat\Tests;
 
 require __DIR__.'/../database/migrations/create_chat_tables.php';
 require __DIR__.'/Helpers/migrations.php';
@@ -8,9 +8,9 @@ require __DIR__.'/Helpers/migrations.php';
 use CreateChatTables;
 use CreateTestTables;
 use Illuminate\Foundation\Application;
-use Musonza\Chat\ChatServiceProvider;
-use Musonza\Chat\Facades\ChatFacade;
-use Musonza\Chat\Tests\Helpers\Models\User;
+use Envatic\Chat\ChatServiceProvider;
+use Envatic\Chat\Facades\ChatFacade;
+use Envatic\Chat\Tests\Helpers\Models\User;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -44,7 +44,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     protected function migrateTestTables()
     {
-        $config = config('musonza_chat');
+        $config = config('envatic_chat');
         $userModel = app($config['user_model']);
         $this->userModelPrimaryKey = $userModel->getKeyName();
     }
@@ -95,12 +95,12 @@ class TestCase extends \Orchestra\Testbench\TestCase
 //             ],
 //         ]);
 
-        $app['config']->set('musonza_chat.user_model', 'Musonza\Chat\Tests\Helpers\Models\User');
-        $app['config']->set('musonza_chat.sent_message_event', 'Musonza\Chat\Eventing\MessageWasSent');
-        $app['config']->set('musonza_chat.broadcasts', false);
-        $app['config']->set('musonza_chat.user_model_primary_key', null);
-        $app['config']->set('musonza_chat.routes.enabled', true);
-        $app['config']->set('musonza_chat.should_load_routes', true);
+        $app['config']->set('envatic_chat.user_model', 'Envatic\Chat\Tests\Helpers\Models\User');
+        $app['config']->set('envatic_chat.sent_message_event', 'Envatic\Chat\Eventing\MessageWasSent');
+        $app['config']->set('envatic_chat.broadcasts', false);
+        $app['config']->set('envatic_chat.user_model_primary_key', null);
+        $app['config']->set('envatic_chat.routes.enabled', true);
+        $app['config']->set('envatic_chat.should_load_routes', true);
     }
 
     protected function getPackageProviders($app)

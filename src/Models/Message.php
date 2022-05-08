@@ -1,14 +1,14 @@
 <?php
 
-namespace Musonza\Chat\Models;
+namespace Envatic\Chat\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Musonza\Chat\BaseModel;
-use Musonza\Chat\Chat;
-use Musonza\Chat\ConfigurationManager;
-use Musonza\Chat\Eventing\AllParticipantsDeletedMessage;
-use Musonza\Chat\Eventing\EventGenerator;
-use Musonza\Chat\Eventing\MessageWasSent;
+use Envatic\Chat\BaseModel;
+use Envatic\Chat\Chat;
+use Envatic\Chat\ConfigurationManager;
+use Envatic\Chat\Eventing\AllParticipantsDeletedMessage;
+use Envatic\Chat\Eventing\EventGenerator;
+use Envatic\Chat\Eventing\MessageWasSent;
 
 class Message extends BaseModel
 {

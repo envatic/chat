@@ -1,6 +1,6 @@
 <?php
 
-namespace Musonza\Chat\Eventing;
+namespace Envatic\Chat\Eventing;
 
 class Event
 {

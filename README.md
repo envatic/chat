@@ -1,16 +1,11 @@
 <p align="left"><img src="menu.png" alt="chat" width="130px"></p>
 
-[![Build Status](https://travis-ci.org/musonza/chat.svg?branch=master)](https://travis-ci.org/musonza/chat)
-[![Downloads](https://poser.pugx.org/musonza/chat/d/total.svg)](https://packagist.org/packages/musonza/chat)
-[![Packagist](https://img.shields.io/packagist/v/musonza/chat.svg)](https://packagist.org/packages/musonza/chat)
-<a href="https://codeclimate.com/github/musonza/chat/maintainability"><img src="https://api.codeclimate.com/v1/badges/85f152eae2a04b25783d/maintainability" /></a>
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/envatic/chat.svg?style=flat-square)](https://packagist.org/packages/envatic/chat)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/envatic/chat/run-tests?label=tests)
+[![Total Downloads](https://img.shields.io/packagist/dt/envatic/chat.svg?style=flat-square)](https://packagist.org/packages/envatic/chat)
 ## Chat
 
-Create a Chat application for your multiple Models
-
-**********************************************************
-**What to learn how to make a package like this? https://leanpub.com/laravel-package-development**
-***************************************************************************************************
 
 ## Table of Contents
 
@@ -49,7 +44,7 @@ Create a Chat application for your multiple Models
 
 </details>
 
-Checkout a simple [Demo Application](https://github.com/musonza/chat-demo)
+Checkout a simple [Demo Application](https://github.com/envatic/chat-demo)
 
 ## Introduction
 
@@ -60,7 +55,7 @@ This package allows you to add a chat system to your Laravel ^5.4 application
 From the command line, run:
 
 ```
-composer require musonza/chat
+composer require envatic/chat
 ```
 
 Publish the assets:
@@ -69,11 +64,11 @@ Publish the assets:
 php artisan vendor:publish
 ```
 
-This will publish database migrations and a configuration file `musonza_chat.php` in the Laravel config folder.
+This will publish database migrations and a configuration file `envatic_chat.php` in the Laravel config folder.
 
 ## Configuration
 
-See `musonza_chat.php` for configuration
+See `envatic_chat.php` for configuration
 
 Run the migrations:
 
@@ -87,13 +82,13 @@ You can mix Models as participants. For instance you can have `Parents`, `Studen
 
 #### Adding the ability to participate to a Model 
 
-Add the `Musonza\Chat\Traits\Messageable` trait to any Model you want to participate in Conversations
+Add the `Envatic\Chat\Traits\Messageable` trait to any Model you want to participate in Conversations
 For example, let's say we want out `Bot` model to chat with other Models:
 
 ```php
 
 use Illuminate\Database\Eloquent\Model;
-use Musonza\Chat\Traits\Messageable;
+use Envatic\Chat\Traits\Messageable;
 
 class Bot extends Model
 {
@@ -256,9 +251,9 @@ Chat::message($message)->setParticipant($participantModel)->delete();
 
 What to cleanup when all participants have deleted a `$message` or `$conversation`?
 
-Listen for `\Musonza\Chat\Eventing\AllParticipantsDeletedMessage` and 
+Listen for `\Envatic\Chat\Eventing\AllParticipantsDeletedMessage` and 
 
-`\Musonza\Chat\Eventing\AllParticipantsClearedConversation`
+`\Envatic\Chat\Eventing\AllParticipantsClearedConversation`
 
 #### Clear a conversation
 
@@ -393,7 +388,7 @@ Need to have more control on the data returned from the package routes? You can
 specify your own Model transformers and take advantage of [Fractal](http://fractal.thephpleague.com/).
 
 All you need to do is specify the location of your transformers in the configuration
-file `musonza_chat.php` as follows:
+file `envatic_chat.php` as follows:
 
 ```php
 /**
