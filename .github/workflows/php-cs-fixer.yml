@@ -10,7 +10,7 @@ jobs:
             -   name: Checkout code
                 uses: actions/checkout@v2
                 with:
-                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    token: ${{ secrets.GITHUB_TOKEN }}
                     ref: ${{ github.head_ref }}
 
             -   name: Run PHP CS Fixer
@@ -21,5 +21,5 @@ jobs:
             -   name: Commit changes
                 uses: stefanzweifel/git-auto-commit-action@v4
                 with:
-                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    token: ${{ secrets.GITHUB_TOKEN }}
                     commit_message: Fix styling
