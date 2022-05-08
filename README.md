@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/envatic/chat.svg?style=flat-square)](https://packagist.org/packages/envatic/chat)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/envatic/chat/run-tests?label=tests)
+[![run-tests](https://github.com/envatic/chat/actions/workflows/run-tests.yml/badge.svg)](https://github.com/envatic/chat/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/envatic/chat.svg?style=flat-square)](https://packagist.org/packages/envatic/chat)
 [![Check & fix styling](https://github.com/envatic/chat/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/envatic/chat/actions/workflows/php-cs-fixer.yml)
 ## Chat
